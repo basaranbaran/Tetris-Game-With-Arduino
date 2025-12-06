@@ -350,15 +350,6 @@ Katkılarınızı bekliyorum! Lütfen:
 
 ---
 
-## 📞 İletişim
-
-Sorularınız veya geri bildirimleriniz için benimle iletişime geçebilirsiniz:
-
-- 💼 **GitHub**: [@basaranbaran](https://github.com/basaranbaran)
-- 🔗 **Repository**: [Tetris-Game-With-Arduino](https://github.com/basaranbaran/Tetris-Game-With-Arduino)
-
----
-
 ## 🎓 Öğrendiklerim
 
 Bu proje sayesinde:
@@ -716,15 +707,6 @@ Contributions are welcome! Please:
 3. 💾 Commit your changes (`git commit -m 'Add new feature'`)
 4. 📤 Push to the branch (`git push origin feature/NewFeature`)
 5. 🔃 Open a Pull Request
-
----
-
-## 📞 Contact
-
-For questions or feedback, feel free to reach out:
-
-- 💼 **GitHub**: [@basaranbaran](https://github.com/basaranbaran)
-- 🔗 **Repository**: [Tetris-Game-With-Arduino](https://github.com/basaranbaran/Tetris-Game-With-Arduino)
 
 ---
 
