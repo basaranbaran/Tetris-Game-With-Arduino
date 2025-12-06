@@ -2,96 +2,79 @@
 
 <div align="center">
 
-**Classic Tetris on 8x24 LED Tower Display | 8x24 LED Kule Ekranında Klasik Tetris**
+**8x24 LED Kule Ekranında Klasik Tetris | Classic Tetris on 8x24 LED Tower Display**
 
-*Arduino Uno + MAX7219 LED Matrix Modules + Analog Joystick*
+*Arduino Uno + MAX7219 LED Matris Modülleri + Analog Joystick*
 
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-[🇬🇧 English](#-about-the-project) • [🇹🇷 Türkçe](#-proje-hakkında)
-
-[Demo Video](#-demo--demo-video) • [Installation](#-installation--kurulum) • [Circuit Diagram](#-circuit-diagram--devre-şeması) • [How to Play](#-how-to-play--nasıl-oynanır)
+[🇹🇷 Türkçe](#-proje-hakkında) • [🇬🇧 English](#-about-the-project)
 
 </div>
 
 ---
 
-## 📝 About The Project | Proje Hakkında
+# 🇹🇷 TÜRKÇE
 
-**🇬🇧 English:**
-
-This project is a **vertical version** of the classic Tetris game running on Arduino-based hardware. Instead of standard horizontal displays, 3 MAX7219 LED Matrix modules are connected vertically to create an **8x24 pixel tower display**.
-
-Game control is provided via an **Analog Joystick** instead of buttons for a smoother experience. The code structure uses a **"Render on Change"** technique to prevent screen flickering, and the game speed increases dynamically based on difficulty level.
-
-**🇹🇷 Türkçe:**
+## 📝 Proje Hakkında
 
 Bu proje, klasik Tetris oyununun Arduino tabanlı donanım üzerinde çalışan **dikey bir versiyonudur**. Standart yatay ekranlar yerine, 3 adet MAX7219 LED Matris modülü dikey olarak birbirine bağlanarak **8x24 piksellik bir kule ekranı** oluşturulmuştur.
 
 Oyun kontrolü, buton yerine **Analog Joystick** ile sağlanarak daha akıcı bir deneyim hedeflenmiştir. Kod yapısında, ekran titremesini önlemek için **"Render on Change"** (Sadece değişimde çiz) tekniği kullanılmış ve oyun hızı, zorluk seviyesine göre dinamik olarak artırılmıştır.
 
-### 🎯 Project Goals | Proje Hedefleri
+### 🎯 Proje Hedefleri
 
-**🇬🇧 English:**
-- Create a physical, hardware-based Tetris game
-- Learn SPI communication and LED matrix control
-- Implement efficient rendering algorithms
-- Build a fun, interactive embedded system project
-
-**🇹🇷 Türkçe:**
 - Fiziksel, donanım tabanlı bir Tetris oyunu oluşturmak
 - SPI haberleşmesi ve LED matris kontrolünü öğrenmek
 - Verimli render algoritmaları geliştirmek
 - Eğlenceli, interaktif bir embedded sistem projesi yapmak
 
-### ✨ Key Features | Öne Çıkan Özellikler
+### ✨ Öne Çıkan Özellikler
 
-- 🎯 **Vertical Gameplay | Dikey Oynanış**: Real Tetris experience on 8x24 LED Tower | 8x24 LED Kule ile gerçek Tetris deneyimi
-- 🕹️ **Analog Joystick Control | Analog Joystick Kontrolü**: More precise and smooth movement than buttons | Butonlardan daha hassas ve akıcı hareket
-- 🎨 **Flicker-Free Display | Titremesiz Görüntü**: Render on Change algorithm eliminates screen flickering | Render on Change algoritması ile flicker-free ekran
-- ⚡ **Dynamic Difficulty | Dinamik Zorluk**: Game speed increases as you progress | Oyun ilerledikçe artan hız
-- 🔄 **Smooth Rotation | Yumuşak Döndürme**: Debounce-protected smooth block rotation | Debounce korumalı yumuşak döndürme
-- 📊 **Line Clear Animation | Satır Silme Animasyonu**: Filled rows are cleared with animation | Dolu satırlar animasyonla silinir
-- 🎮 **7 Classic Tetris Pieces | 7 Klasik Tetris Şekli**: I, J, L, O, S, T, Z shapes | I, J, L, O, S, T, Z şekilleri
-- ⚙️ **SPI Daisy Chain | SPI Zincirleme Bağlantı**: Efficient use of Arduino pins with chained modules | Zincirleme bağlı modüllerle Arduino pinlerinin verimli kullanımı
+- 🎯 **Dikey Oynanış**: 8x24 LED Kule ile gerçek Tetris deneyimi
+- 🕹️ **Analog Joystick Kontrolü**: Butonlardan daha hassas ve akıcı hareket
+- 🎨 **Titremesiz Görüntü**: Render on Change algoritması ile flicker-free ekran
+- ⚡ **Dinamik Zorluk**: Oyun ilerledikçe artan hız
+- 🔄 **Yumuşak Döndürme**: Debounce korumalı yumuşak döndürme
+- 📊 **Satır Silme Animasyonu**: Dolu satırlar animasyonla silinir
+- 🎮 **7 Klasik Tetris Şekli**: I, J, L, O, S, T, Z şekilleri
+- ⚙️ **SPI Zincirleme Bağlantı**: Zincirleme bağlı modüllerle Arduino pinlerinin verimli kullanımı
 
 ---
 
-## 🎥 Demo | Demo Video
+## 🎥 Demo Video
 
 <div align="center">
 
-### Gameplay Video | Oyun Görüntüsü
+### Oyun Görüntüsü
 
 https://github.com/user-attachments/assets/sample-video.mp4
 
-*Demo video of the project in action | Projenin çalışır halinin demo videosu*
+*Projenin çalışır halinin demo videosu*
 
 </div>
 
 ---
 
-## 🛠️ Hardware Requirements | Donanım Gereksinimleri
+## 🛠️ Donanım Gereksinimleri
 
-| Component | Quantity | Description |
-|-----------|----------|-------------|
-| **Arduino Uno/Nano** | 1x | Main controller board | Ana kontrol kartı |
-| **MAX7219 8x8 LED Matrix** | 3x | Daisy-chain connected display modules | Zincirleme bağlı ekran modülleri |
-| **Analog Joystick Module** | 1x | XY axis + button | XY eksenli + buton |
-| **Jumper Wires** | - | Male-to-male connection wires | Erkek-erkek bağlantı kabloları |
-| **Breadboard** | 1x | (Optional) For prototyping | (Opsiyonel) Prototip için |
+| Bileşen | Miktar | Açıklama |
+|---------|--------|----------|
+| **Arduino Uno/Nano** | 1x | Ana kontrol kartı |
+| **MAX7219 8x8 LED Matris** | 3x | Zincirleme bağlı ekran modülleri |
+| **Analog Joystick Modülü** | 1x | XY eksenli + buton |
+| **Jumper Kablolar** | - | Erkek-erkek bağlantı kabloları |
+| **Breadboard** | 1x | (Opsiyonel) Prototip için |
 
-### 💰 Estimated Cost | Tahmini Maliyet
+### 💰 Tahmini Maliyet
 
-**🇬🇧 English:** Total estimated cost: **~$15-20** (All components included)
-
-**🇹🇷 Türkçe:** Tahmini toplam maliyet: **~15-20$** (Tüm bileşenler dahil)
+Tahmini toplam maliyet: **~15-20$** (Tüm bileşenler dahil)
 
 ---
 
-## 🔌 Circuit Diagram | Devre Şeması
+## 🔌 Devre Şeması
 
 <div align="center">
 
@@ -99,131 +82,104 @@ https://github.com/user-attachments/assets/sample-video.mp4
 
 </div>
 
-### Connection Details | Bağlantı Detayları
+### Bağlantı Detayları
 
-#### 1️⃣ Power Bus | Güç Hattı
+#### 1️⃣ Güç Hattı
 
-**🇬🇧 English:** All components are powered from a common power bus.
-
-**🇹🇷 Türkçe:** Tüm bileşenler ortak güç hattından beslenir.
+Tüm bileşenler ortak güç hattından beslenir.
 
 ```
-Arduino 5V  → All Modules VCC + Joystick VCC | Tüm Modüllerin VCC + Joystick VCC
-Arduino GND → All Modules GND + Joystick GND | Tüm Modüllerin GND + Joystick GND
+Arduino 5V  → Tüm Modüllerin VCC + Joystick VCC
+Arduino GND → Tüm Modüllerin GND + Joystick GND
 ```
 
-#### 2️⃣ LED Matrix Connection (Daisy Chain) | LED Matris Bağlantısı (Zincirleme)
+#### 2️⃣ LED Matris Bağlantısı (Zincirleme)
 
-**🇬🇧 English:** 3 modules are connected in a chain. The module closest to Arduino (bottom) = **Module 1**
+3 modül birbirine zincirleme bağlıdır. Arduino'ya en yakın modül (en alt) = **Modül 1**
 
-**🇹🇷 Türkçe:** 3 modül birbirine zincirleme bağlıdır. Arduino'ya en yakın modül (en alt) = **Modül 1**
+| Arduino Pin | Modül Pin | Açıklama |
+|-------------|-----------|----------|
+| `Pin 13` | `CLK` | Tüm modüllerin CLK pinine paralel |
+| `Pin 10` | `CS (LOAD)` | Tüm modüllerin CS pinine paralel |
+| `Pin 11` | `DIN` | **Sadece 1. modülün DIN pinine** |
 
-| Arduino Pin | Module Pin | Description |
-|-------------|------------|-------------|
-| `Pin 13` | `CLK` | Parallel to all modules' CLK pins | Tüm modüllerin CLK pinine paralel |
-| `Pin 10` | `CS (LOAD)` | Parallel to all modules' CS pins | Tüm modüllerin CS pinine paralel |
-| `Pin 11` | `DIN` | **Only to Module 1's DIN pin** | **Sadece 1. modülün DIN pinine** |
-
-**📡 Data Flow | Veri Akışı:**
+**📡 Veri Akışı:**
 ```
-Arduino (Pin 11) → Module 1 (DIN) | Modül 1 (DIN)
-                   Module 1 (DOUT) → Module 2 (DIN) | Modül 1 (DOUT) → Modül 2 (DIN)
-                                     Module 2 (DOUT) → Module 3 (DIN) | Modül 2 (DOUT) → Modül 3 (DIN)
+Arduino (Pin 11) → Modül 1 (DIN)
+                   Modül 1 (DOUT) → Modül 2 (DIN)
+                                     Modül 2 (DOUT) → Modül 3 (DIN)
 ```
 
-#### 3️⃣ Joystick Connection | Joystick Bağlantısı
+#### 3️⃣ Joystick Bağlantısı
 
-| Arduino Pin | Joystick Pin | Function |
-|-------------|--------------|----------|
-| `A0` | `HORZ / VRX` | 🔄 Left-Right movement | Sağa-Sola hareket |
-| `A1` | `VERT / VRY` | ⬇️ Fast drop (Soft Drop) | Hızlı düşme (Soft Drop) |
-| `Pin 2` | `SEL / SW` | 🔃 Block rotation (90°) | Blok döndürme (90°) |
+| Arduino Pin | Joystick Pin | İşlevi |
+|-------------|--------------|--------|
+| `A0` | `HORZ / VRX` | 🔄 Sağa-Sola hareket |
+| `A1` | `VERT / VRY` | ⬇️ Hızlı düşme (Soft Drop) |
+| `Pin 2` | `SEL / SW` | 🔃 Blok döndürme (90°) |
 
 ---
 
-## 📥 Installation | Kurulum
+## 📥 Kurulum
 
-### 1. Arduino IDE Setup | Arduino IDE Kurulumu
+### 1. Arduino IDE Kurulumu
 
-**🇬🇧 English:**
-1. Download and install [Arduino IDE](https://www.arduino.cc/en/software)
-2. Connect Arduino to your computer via USB
-
-**🇹🇷 Türkçe:**
 1. [Arduino IDE](https://www.arduino.cc/en/software) indirin ve kurun
 2. Arduino'yu USB ile bilgisayara bağlayın
 
-### 2. Library Installation | Kütüphane Kurulumu
+### 2. Kütüphane Kurulumu
 
-**🇬🇧 English:** Required library: **LedControl** (for MAX7219 control)
+Gerekli kütüphane: **LedControl** (MAX7219 kontrolü için)
 
-**🇹🇷 Türkçe:** Gerekli kütüphane: **LedControl** (MAX7219 kontrolü için)
-
-**Via Arduino IDE:**
+**Arduino IDE üzerinden:**
 ```
 Sketch → Include Library → Manage Libraries
-Search: "LedControl" | Arama: "LedControl"
-Author: Eberhard Fahle | Yazar: Eberhard Fahle
+Arama: "LedControl"
+Yazar: Eberhard Fahle
 → Install
 ```
 
-**Or manually | Veya manuel olarak:**
+**Veya manuel olarak:**
 ```bash
-# Clone the library
+# Kütüphaneyi klonlayın
 git clone https://github.com/wayoda/LedControl.git
-# Copy to Arduino libraries folder | Arduino kütüphaneler klasörüne kopyalayın
+# Arduino kütüphaneler klasörüne kopyalayın
 ```
 
-### 3. Upload Code | Kod Yükleme
+### 3. Kod Yükleme
 
-**🇬🇧 English:**
-1. Open `sketch_nov27a/sketch_nov27a.ino` file in Arduino IDE
-2. **Tools → Board** → Select Arduino Uno/Nano
-3. **Tools → Port** → Select your COM port
-4. Click **Upload** button (➡️)
-
-**🇹🇷 Türkçe:**
 1. `sketch_nov27a/sketch_nov27a.ino` dosyasını Arduino IDE ile açın
 2. **Tools → Board** → Arduino Uno/Nano seçin
 3. **Tools → Port** → COM portunu seçin
 4. **Upload** butonuna basın (➡️)
 
-### 4. Physical Assembly | Fiziksel Montaj
+### 4. Fiziksel Montaj
 
-**🇬🇧 English:** ⚠️ **IMPORTANT**: The breadboard must be held **VERTICALLY (portrait)** for the game!
-
-**🇹🇷 Türkçe:** ⚠️ **ÖNEMLİ**: Oyun için breadboard'u **DİKEY (portre)** tutmalısınız!
+⚠️ **ÖNEMLİ**: Oyun için breadboard'u **DİKEY (portre)** tutmalısınız!
 
 ```
-      [Module 3] ← Top | [Modül 3] ← En Üst
+      [Modül 3] ← En Üst
           ↑
-      [Module 2] ← Middle | [Modül 2] ← Orta
+      [Modül 2] ← Orta
           ↑
-      [Module 1] ← Bottom (closest to Arduino) | [Modül 1] ← En Alt (Arduino'ya en yakın)
+      [Modül 1] ← En Alt (Arduino'ya en yakın)
           ↑
       [Arduino]
 ```
 
 ---
 
-## 🎮 How to Play | Nasıl Oynanır?
+## 🎮 Nasıl Oynanır?
 
-| Control | Action |
-|---------|--------|
-| 🕹️ **Joystick Left | Joystick Sola** | Move block left | Bloğu sola hareket ettir |
-| 🕹️ **Joystick Right | Joystick Sağa** | Move block right | Bloğu sağa hareket ettir |
-| 🕹️ **Joystick Down | Joystick Aşağı** | Fast drop (Soft Drop) | Hızlı düşme (Soft Drop) |
-| 🔘 **Joystick Button | Joystick Butonu** | Rotate block 90° | Bloğu 90° döndür |
+| Kontrol | Aksiyon |
+|---------|---------|
+| 🕹️ **Joystick Sola** | Bloğu sola hareket ettir |
+| 🕹️ **Joystick Sağa** | Bloğu sağa hareket ettir |
+| 🕹️ **Joystick Aşağı** | Hızlı düşme (Soft Drop) |
+| 🔘 **Joystick Butonu** | Bloğu 90° döndür |
 
-### Game Mechanics | Oyun Mekanikleri
+### Oyun Mekanikleri
 
-**🇬🇧 English:**
-- ✅ **Line Clearing**: Fully filled rows are automatically cleared
-- ⚡ **Difficulty**: Game speeds up with each cleared line
-- 🎯 **Objective**: Clear maximum lines before blocks reach the top
-- 🎮 **Game Over**: Game resets when blocks reach the top
-
-**🇹🇷 Türkçe:**
 - ✅ **Satır Doldurma**: Tam dolu satırlar otomatik silinir
 - ⚡ **Zorluk**: Her silinen satırda oyun hızlanır
 - 🎯 **Hedef**: Bloklar tavana ulaşmadan maksimum satır silme
@@ -231,20 +187,16 @@ git clone https://github.com/wayoda/LedControl.git
 
 ---
 
-## ⚙️ Technical Details | Teknik Detaylar
+## ⚙️ Teknik Detaylar
 
-### Software Architecture | Yazılım Mimarisi
+### Yazılım Mimarisi
 
-#### 🎨 Render on Change Algorithm | Render on Change Algoritması
+#### 🎨 Render on Change Algoritması
 
-**🇬🇧 English:** The display is only updated when the game state changes, preventing flickering:
-
-**🇹🇷 Türkçe:** Ekran sadece oyun durumu değiştiğinde güncellenir, titremeyi önler:
+Ekran sadece oyun durumu değiştiğinde güncellenir, titremeyi önler:
 
 ```cpp
-// Screen is not constantly refreshed → Prevents flickering
 // Ekran sürekli yenilenmez → Titreme önlenir
-// Display updates only when block moves
 // Sadece blok hareket ettiğinde ekran güncellenir
 if (updateScreen) {
     renderGame();
@@ -252,207 +204,564 @@ if (updateScreen) {
 }
 ```
 
-#### 📐 Coordinate System | Koordinat Sistemi
+#### 📐 Koordinat Sistemi
 
-**🇬🇧 English:** Physically separate 3 modules work as a **single 8x24 coordinate plane** in software:
-
-**🇹🇷 Türkçe:** Fiziksel olarak ayrı 3 modül, yazılımsal olarak **tek bir 8x24 koordinat düzlemi** gibi çalışır:
+Fiziksel olarak ayrı 3 modül, yazılımsal olarak **tek bir 8x24 koordinat düzlemi** gibi çalışır:
 
 ```
-Y: 0-7   → Module 1 (Bottom) | Modül 1 (Alt)
-Y: 8-15  → Module 2 (Middle) | Modül 2 (Orta)
-Y: 16-23 → Module 3 (Top) | Modül 3 (Üst)
+Y: 0-7   → Modül 1 (Alt)
+Y: 8-15  → Modül 2 (Orta)
+Y: 16-23 → Modül 3 (Üst)
 ```
 
-#### 🔄 Joystick Calibration Values | Joystick Kalibrasyon Değerleri
+#### 🔄 Joystick Kalibrasyon Değerleri
 
 ```cpp
-// X Axis (Left-Right) | X Ekseni (Sağ-Sol)
-if (analogRead(A0) < 200)  → Left | Sola
-if (analogRead(A0) > 800)  → Right | Sağa
+// X Ekseni (Sağ-Sol)
+if (analogRead(A0) < 200)  → Sola
+if (analogRead(A0) > 800)  → Sağa
 
-// Y Axis (Fast Drop) | Y Ekseni (Hızlı Düşme)
-if (analogRead(A1) > 800)  → Down (Soft Drop) | Aşağı (Soft Drop)
+// Y Ekseni (Hızlı Düşme)
+if (analogRead(A1) > 800)  → Aşağı (Soft Drop)
 
-// Button (Rotation) | Buton (Döndürme)
-digitalRead(2) == LOW      → 90° Rotate | 90° Döndür
+// Buton (Döndürme)
+digitalRead(2) == LOW      → 90° Döndür
 ```
 
-#### 🛡️ Debounce Protection | Debounce Koruması
+#### 🛡️ Debounce Koruması
 
 ```cpp
-// Prevents button bounce/ghost presses
 // Buton ark atlamasını önleme
 unsigned long debounceDelay = 250; // ms
 ```
 
-#### 🎯 Line Clearing Algorithm | Satır Silme Algoritması
+#### 🎯 Satır Silme Algoritması
 
 ```cpp
-// Byte value 255 = Row completely filled
 // Byte değeri 255 = Satır tamamen dolu
 for (int row = 0; row < SCREEN_HEIGHT; row++) {
     if (board[row] == 255) {
-        clearLine(row); // Clear with animation | Animasyon ile sil
-        shiftDown(row); // Shift upper rows down | Üst satırları aşağı kaydır
+        clearLine(row); // Animasyon ile sil
+        shiftDown(row); // Üst satırları aşağı kaydır
     }
 }
 ```
 
-### Technologies Used | Kullanılan Teknolojiler
+### Kullanılan Teknolojiler
 
-- 🔧 **Library | Kütüphane**: LedControl.h (SPI communication | SPI haberleşmesi)
-- 💻 **Programming | Programlama**: C++ (Arduino)
-- 🎮 **Hardware Protocol | Donanım Protokolü**: SPI (Serial Peripheral Interface)
-- 📟 **Display Driver | Ekran Sürücüsü**: MAX7219
-- 🎯 **Game Logic | Oyun Mantığı**: Custom Tetris implementation | Özel Tetris implementasyonu
+- 🔧 **Kütüphane**: LedControl.h (SPI haberleşmesi)
+- 💻 **Programlama**: C++ (Arduino)
+- 🎮 **Donanım Protokolü**: SPI (Serial Peripheral Interface)
+- 📟 **Ekran Sürücüsü**: MAX7219
+- 🎯 **Oyun Mantığı**: Özel Tetris implementasyonu
 
 ---
 
-## 📂 Project Structure | Proje Yapısı
+## 📂 Proje Yapısı
 
 ```
 Tetris-Game-With-Arduino/
 │
 ├── sketch_nov27a/
-│   └── sketch_nov27a.ino      # Main Arduino code | Ana Arduino kodu
+│   └── sketch_nov27a.ino      # Ana Arduino kodu
 │
 ├── diagram-image/
-│   └── circuit_diagram.png    # Circuit diagram | Devre şeması
+│   └── circuit_diagram.png    # Devre şeması
 │
 ├── sample/
-│   └── sample-video.mp4       # Demo video | Demo video
+│   └── sample-video.mp4       # Demo video
 │
-└── README.md                  # This file | Bu dosya
+└── README.md                  # Bu dosya
 ```
 
 ---
 
-## 🐛 Troubleshooting | Sorun Giderme
+## 🐛 Sorun Giderme
 
-### Display Not Working | Ekran Yanmıyor
+### Ekran Yanmıyor
 
-- ✅ Check 5V and GND connections | 5V ve GND bağlantılarını kontrol edin
-- ✅ Verify modules' CLK, CS, DIN pins | Modüllerin CLK, CS, DIN pinlerini doğrulayın
-- ✅ Ensure LedControl library is installed | LedControl kütüphanesinin yüklü olduğundan emin olun
-- ✅ Check if modules are properly daisy-chained | Modüllerin düzgün zincirleme bağlı olduğunu kontrol edin
+- ✅ 5V ve GND bağlantılarını kontrol edin
+- ✅ Modüllerin CLK, CS, DIN pinlerini doğrulayın
+- ✅ LedControl kütüphanesinin yüklü olduğundan emin olun
+- ✅ Modüllerin düzgün zincirleme bağlı olduğunu kontrol edin
 
-### Joystick Not Working | Joystick Çalışmıyor
+### Joystick Çalışmıyor
 
-- ✅ Verify VRX → A0, VRY → A1 connections | VRX → A0, VRY → A1 bağlantısını kontrol edin
-- ✅ Confirm joystick button pin is connected to Pin 2 | Joystick buton pininin Pin 2'ye bağlı olduğunu doğrulayın
-- ✅ Read analog values from Serial Monitor (should be 0-1023) | Serial Monitor'dan analog değerleri okuyun (0-1023 arası)
-- ✅ Test joystick with Serial Monitor to see raw values | Joystick'i Serial Monitor ile test edin
+- ✅ VRX → A0, VRY → A1 bağlantısını kontrol edin
+- ✅ Joystick buton pininin Pin 2'ye bağlı olduğunu doğrulayın
+- ✅ Serial Monitor'dan analog değerleri okuyun (0-1023 arası)
+- ✅ Joystick'i Serial Monitor ile test edin
 
-### Blocks Moving in Wrong Direction | Bloklar Ters Yönde Hareket Ediyor
+### Bloklar Ters Yönde Hareket Ediyor
 
-- ✅ Adjust joystick direction calibration by reversing < and > signs in code | Joystick yön kalibrasyonunu koddaki < ve > işaretlerini ters çevirerek ayarlayın
-- ✅ Check physical order of modules (Bottom→Top) | Modüllerin fiziksel sırasını kontrol edin (Alt→Üst)
-- ✅ Verify joystick is not inverted | Joystick'in ters bağlı olmadığını kontrol edin
+- ✅ Joystick yön kalibrasyonunu koddaki < ve > işaretlerini ters çevirerek ayarlayın
+- ✅ Modüllerin fiziksel sırasını kontrol edin (Alt→Üst)
+- ✅ Joystick'in ters bağlı olmadığını kontrol edin
 
-### Screen Flickering | Ekran Titriyor
+### Ekran Titriyor
 
-- ✅ Ensure Render on Change algorithm is working correctly | Render on Change algoritmasının doğru çalıştığından emin olun
-- ✅ Check if power supply provides sufficient current (all modules need ~200mA) | Güç kaynağının yeterli akımı sağladığını kontrol edin (~200mA)
-- ✅ Try reducing display intensity: `lc.setIntensity(i, 2);` | Ekran parlaklığını azaltmayı deneyin
+- ✅ Render on Change algoritmasının doğru çalıştığından emin olun
+- ✅ Güç kaynağının yeterli akımı sağladığını kontrol edin (~200mA)
+- ✅ Ekran parlaklığını azaltmayı deneyin: `lc.setIntensity(i, 2);`
 
-### Game Not Starting | Oyun Başlamıyor
+### Oyun Başlamıyor
 
-- ✅ Check if code uploaded successfully | Kodun başarıyla yüklendiğini kontrol edin
-- ✅ Verify all connections are secure | Tüm bağlantıların sağlam olduğunu doğrulayın
-- ✅ Reset Arduino and check Serial Monitor for errors | Arduino'yu sıfırlayın ve Serial Monitor'da hataları kontrol edin
-
----
-
-## 🚀 Future Improvements | Geliştirme Fikirleri
-
-- [ ] Score display (7-segment display) | Skor tablosu (7-segment display)
-- [ ] Sound effects (Buzzer module) | Ses efektleri (Buzzer modülü)
-- [ ] Level indicator | Seviye göstergesi
-- [ ] Pause/Resume feature | Duraklat/Devam özelliği
-- [ ] High score saving (EEPROM) | Yüksek skor kaydı (EEPROM)
-- [ ] Ghost piece (showing where block will land) | Ghost piece (bloğun düşeceği yerin gösterimi)
-- [ ] Next piece preview | Sonraki parça önizlemesi
-- [ ] Multiplayer mode | Çok oyunculu mod
-- [ ] Different game modes | Farklı oyun modları
+- ✅ Kodun başarıyla yüklendiğini kontrol edin
+- ✅ Tüm bağlantıların sağlam olduğunu doğrulayın
+- ✅ Arduino'yu sıfırlayın ve Serial Monitor'da hataları kontrol edin
 
 ---
 
-## 📸 Screenshots | Ekran Görüntüleri
+## 🚀 Geliştirme Fikirleri
 
-> Update this section with your actual project photos | Bu bölümü gerçek projenizin fotoğraflarıyla güncelleyebilirsiniz
+- [ ] Skor tablosu (7-segment display)
+- [ ] Ses efektleri (Buzzer modülü)
+- [ ] Seviye göstergesi
+- [ ] Duraklat/Devam özelliği
+- [ ] Yüksek skor kaydı (EEPROM)
+- [ ] Ghost piece (bloğun düşeceği yerin gösterimi)
+- [ ] Sonraki parça önizlemesi
+- [ ] Çok oyunculu mod
+- [ ] Farklı oyun modları
+
+---
+
+## 📸 Ekran Görüntüleri
+
+> Bu bölümü gerçek projenizin fotoğraflarıyla güncelleyebilirsiniz
 
 ```
-📷 Assembled project photos | Kurulmuş proje fotoğrafları
-📷 Gameplay screenshots | Oyun anı ekran görüntüleri
-📷 Circuit connection details | Devre bağlantı detayları
+📷 Kurulmuş proje fotoğrafları
+📷 Oyun anı ekran görüntüleri
+📷 Devre bağlantı detayları
 ```
 
 ---
 
-## 🤝 Contributing | Katkıda Bulunma
+## 🤝 Katkıda Bulunma
 
-**🇬🇧 English:** Contributions are welcome! Please:
+Katkılarınızı bekliyorum! Lütfen:
 
-**🇹🇷 Türkçe:** Katkılarınızı bekliyorum! Lütfen:
-
-1. 🍴 Fork this repository | Bu repo'yu fork edin
-2. 🔨 Create a new branch (`git checkout -b feature/NewFeature`) | Yeni bir branch oluşturun
-3. 💾 Commit your changes (`git commit -m 'Add new feature'`) | Değişikliklerinizi commit edin
-4. 📤 Push to the branch (`git push origin feature/NewFeature`) | Branch'inizi push edin
-5. 🔃 Open a Pull Request | Pull Request açın
+1. 🍴 Bu repo'yu fork edin
+2. 🔨 Yeni bir branch oluşturun (`git checkout -b feature/YeniOzellik`)
+3. 💾 Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik eklendi'`)
+4. 📤 Branch'inizi push edin (`git push origin feature/YeniOzellik`)
+5. 🔃 Pull Request açın
 
 ---
 
-## 📞 Contact | İletişim
+## 📞 İletişim
 
-**🇬🇧 English:** For questions or feedback, feel free to reach out:
-
-**🇹🇷 Türkçe:** Sorularınız veya geri bildirimleriniz için benimle iletişime geçebilirsiniz:
+Sorularınız veya geri bildirimleriniz için benimle iletişime geçebilirsiniz:
 
 - 💼 **GitHub**: [@basaranbaran](https://github.com/basaranbaran)
 - 🔗 **Repository**: [Tetris-Game-With-Arduino](https://github.com/basaranbaran/Tetris-Game-With-Arduino)
 
 ---
 
-## 🎓 What I Learned | Öğrendiklerim
+## 🎓 Öğrendiklerim
 
-**🇬🇧 English:** Through this project, I learned:
+Bu proje sayesinde:
 
-**🇹🇷 Türkçe:** Bu proje sayesinde:
-
-- ✅ MAX7219 LED Matrix control | MAX7219 LED Matris kontrolünü
-- ✅ SPI communication protocol | SPI haberleşme protokolünü
-- ✅ Analog sensor reading (Joystick) | Analog sensör okumayı (Joystick)
-- ✅ Game loop and state management | Oyun döngüsü ve state management
-- ✅ Render optimization techniques | Render optimization tekniklerini
-- ✅ Debounce algorithm implementation | Debounce algoritmasını
-- ✅ Hardware-software integration | Donanım-yazılım entegrasyonunu
-- ✅ Embedded systems programming | Embedded sistem programlamayı öğrendim
+- ✅ MAX7219 LED Matris kontrolünü
+- ✅ SPI haberleşme protokolünü
+- ✅ Analog sensör okumayı (Joystick)
+- ✅ Oyun döngüsü ve state management
+- ✅ Render optimization tekniklerini
+- ✅ Debounce algoritmasını
+- ✅ Donanım-yazılım entegrasyonunu
+- ✅ Embedded sistem programlamayı öğrendim
 
 ---
 
-## 🙏 Acknowledgments | Teşekkürler
+## 🙏 Teşekkürler
 
-**🇬🇧 English:** Thanks to the resources that helped during development:
-
-**🇹🇷 Türkçe:** Bu projeyi geliştirirken yardımcı olan kaynaklara teşekkürler:
+Bu projeyi geliştirirken yardımcı olan kaynaklara teşekkürler:
 
 - Arduino Community
 - LedControl Library (Eberhard Fahle)
 - Tetris Game Logic References
-- All contributors and testers | Tüm katkıda bulunanlar ve test edenler
+- Tüm katkıda bulunanlar ve test edenler
+
+---
+
+# 🇬🇧 ENGLISH
+
+## 📝 About The Project
+
+This project is a **vertical version** of the classic Tetris game running on Arduino-based hardware. Instead of standard horizontal displays, 3 MAX7219 LED Matrix modules are connected vertically to create an **8x24 pixel tower display**.
+
+Game control is provided via an **Analog Joystick** instead of buttons for a smoother experience. The code structure uses a **"Render on Change"** technique to prevent screen flickering, and the game speed increases dynamically based on difficulty level.
+
+### 🎯 Project Goals
+
+- Create a physical, hardware-based Tetris game
+- Learn SPI communication and LED matrix control
+- Implement efficient rendering algorithms
+- Build a fun, interactive embedded system project
+
+### ✨ Key Features
+
+- 🎯 **Vertical Gameplay**: Real Tetris experience on 8x24 LED Tower
+- 🕹️ **Analog Joystick Control**: More precise and smooth movement than buttons
+- 🎨 **Flicker-Free Display**: Render on Change algorithm eliminates screen flickering
+- ⚡ **Dynamic Difficulty**: Game speed increases as you progress
+- 🔄 **Smooth Rotation**: Debounce-protected smooth block rotation
+- 📊 **Line Clear Animation**: Filled rows are cleared with animation
+- 🎮 **7 Classic Tetris Pieces**: I, J, L, O, S, T, Z shapes
+- ⚙️ **SPI Daisy Chain**: Efficient use of Arduino pins with chained modules
+
+---
+
+## 🎥 Demo Video
+
+<div align="center">
+
+### Gameplay Video
+
+https://github.com/user-attachments/assets/sample-video.mp4
+
+*Demo video of the project in action*
+
+</div>
+
+---
+
+## 🛠️ Hardware Requirements
+
+| Component | Quantity | Description |
+|-----------|----------|-------------|
+| **Arduino Uno/Nano** | 1x | Main controller board |
+| **MAX7219 8x8 LED Matrix** | 3x | Daisy-chain connected display modules |
+| **Analog Joystick Module** | 1x | XY axis + button |
+| **Jumper Wires** | - | Male-to-male connection wires |
+| **Breadboard** | 1x | (Optional) For prototyping |
+
+### 💰 Estimated Cost
+
+Total estimated cost: **~$15-20** (All components included)
+
+---
+
+## 🔌 Circuit Diagram
+
+<div align="center">
+
+![Circuit Diagram](diagram-image/circuit_diagram.png)
+
+</div>
+
+### Connection Details
+
+#### 1️⃣ Power Bus
+
+All components are powered from a common power bus.
+
+```
+Arduino 5V  → All Modules VCC + Joystick VCC
+Arduino GND → All Modules GND + Joystick GND
+```
+
+#### 2️⃣ LED Matrix Connection (Daisy Chain)
+
+3 modules are connected in a chain. The module closest to Arduino (bottom) = **Module 1**
+
+| Arduino Pin | Module Pin | Description |
+|-------------|------------|-------------|
+| `Pin 13` | `CLK` | Parallel to all modules' CLK pins |
+| `Pin 10` | `CS (LOAD)` | Parallel to all modules' CS pins |
+| `Pin 11` | `DIN` | **Only to Module 1's DIN pin** |
+
+**📡 Data Flow:**
+```
+Arduino (Pin 11) → Module 1 (DIN)
+                   Module 1 (DOUT) → Module 2 (DIN)
+                                     Module 2 (DOUT) → Module 3 (DIN)
+```
+
+#### 3️⃣ Joystick Connection
+
+| Arduino Pin | Joystick Pin | Function |
+|-------------|--------------|----------|
+| `A0` | `HORZ / VRX` | 🔄 Left-Right movement |
+| `A1` | `VERT / VRY` | ⬇️ Fast drop (Soft Drop) |
+| `Pin 2` | `SEL / SW` | 🔃 Block rotation (90°) |
+
+---
+
+## 📥 Installation
+
+### 1. Arduino IDE Setup
+
+1. Download and install [Arduino IDE](https://www.arduino.cc/en/software)
+2. Connect Arduino to your computer via USB
+
+### 2. Library Installation
+
+Required library: **LedControl** (for MAX7219 control)
+
+**Via Arduino IDE:**
+```
+Sketch → Include Library → Manage Libraries
+Search: "LedControl"
+Author: Eberhard Fahle
+→ Install
+```
+
+**Or manually:**
+```bash
+# Clone the library
+git clone https://github.com/wayoda/LedControl.git
+# Copy to Arduino libraries folder
+```
+
+### 3. Upload Code
+
+1. Open `sketch_nov27a/sketch_nov27a.ino` file in Arduino IDE
+2. **Tools → Board** → Select Arduino Uno/Nano
+3. **Tools → Port** → Select your COM port
+4. Click **Upload** button (➡️)
+
+### 4. Physical Assembly
+
+⚠️ **IMPORTANT**: The breadboard must be held **VERTICALLY (portrait)** for the game!
+
+```
+      [Module 3] ← Top
+          ↑
+      [Module 2] ← Middle
+          ↑
+      [Module 1] ← Bottom (closest to Arduino)
+          ↑
+      [Arduino]
+```
+
+---
+
+## 🎮 How to Play
+
+| Control | Action |
+|---------|--------|
+| 🕹️ **Joystick Left** | Move block left |
+| 🕹️ **Joystick Right** | Move block right |
+| 🕹️ **Joystick Down** | Fast drop (Soft Drop) |
+| 🔘 **Joystick Button** | Rotate block 90° |
+
+### Game Mechanics
+
+- ✅ **Line Clearing**: Fully filled rows are automatically cleared
+- ⚡ **Difficulty**: Game speeds up with each cleared line
+- 🎯 **Objective**: Clear maximum lines before blocks reach the top
+- 🎮 **Game Over**: Game resets when blocks reach the top
+
+---
+
+## ⚙️ Technical Details
+
+### Software Architecture
+
+#### 🎨 Render on Change Algorithm
+
+The display is only updated when the game state changes, preventing flickering:
+
+```cpp
+// Screen is not constantly refreshed → Prevents flickering
+// Display updates only when block moves
+if (updateScreen) {
+    renderGame();
+    updateScreen = false;
+}
+```
+
+#### 📐 Coordinate System
+
+Physically separate 3 modules work as a **single 8x24 coordinate plane** in software:
+
+```
+Y: 0-7   → Module 1 (Bottom)
+Y: 8-15  → Module 2 (Middle)
+Y: 16-23 → Module 3 (Top)
+```
+
+#### 🔄 Joystick Calibration Values
+
+```cpp
+// X Axis (Left-Right)
+if (analogRead(A0) < 200)  → Left
+if (analogRead(A0) > 800)  → Right
+
+// Y Axis (Fast Drop)
+if (analogRead(A1) > 800)  → Down (Soft Drop)
+
+// Button (Rotation)
+digitalRead(2) == LOW      → 90° Rotate
+```
+
+#### 🛡️ Debounce Protection
+
+```cpp
+// Prevents button bounce/ghost presses
+unsigned long debounceDelay = 250; // ms
+```
+
+#### 🎯 Line Clearing Algorithm
+
+```cpp
+// Byte value 255 = Row completely filled
+for (int row = 0; row < SCREEN_HEIGHT; row++) {
+    if (board[row] == 255) {
+        clearLine(row); // Clear with animation
+        shiftDown(row); // Shift upper rows down
+    }
+}
+```
+
+### Technologies Used
+
+- 🔧 **Library**: LedControl.h (SPI communication)
+- 💻 **Programming**: C++ (Arduino)
+- 🎮 **Hardware Protocol**: SPI (Serial Peripheral Interface)
+- 📟 **Display Driver**: MAX7219
+- 🎯 **Game Logic**: Custom Tetris implementation
+
+---
+
+## 📂 Project Structure
+
+```
+Tetris-Game-With-Arduino/
+│
+├── sketch_nov27a/
+│   └── sketch_nov27a.ino      # Main Arduino code
+│
+├── diagram-image/
+│   └── circuit_diagram.png    # Circuit diagram
+│
+├── sample/
+│   └── sample-video.mp4       # Demo video
+│
+└── README.md                  # This file
+```
+
+---
+
+## 🐛 Troubleshooting
+
+### Display Not Working
+
+- ✅ Check 5V and GND connections
+- ✅ Verify modules' CLK, CS, DIN pins
+- ✅ Ensure LedControl library is installed
+- ✅ Check if modules are properly daisy-chained
+
+### Joystick Not Working
+
+- ✅ Verify VRX → A0, VRY → A1 connections
+- ✅ Confirm joystick button pin is connected to Pin 2
+- ✅ Read analog values from Serial Monitor (should be 0-1023)
+- ✅ Test joystick with Serial Monitor to see raw values
+
+### Blocks Moving in Wrong Direction
+
+- ✅ Adjust joystick direction calibration by reversing < and > signs in code
+- ✅ Check physical order of modules (Bottom→Top)
+- ✅ Verify joystick is not inverted
+
+### Screen Flickering
+
+- ✅ Ensure Render on Change algorithm is working correctly
+- ✅ Check if power supply provides sufficient current (all modules need ~200mA)
+- ✅ Try reducing display intensity: `lc.setIntensity(i, 2);`
+
+### Game Not Starting
+
+- ✅ Check if code uploaded successfully
+- ✅ Verify all connections are secure
+- ✅ Reset Arduino and check Serial Monitor for errors
+
+---
+
+## 🚀 Future Improvements
+
+- [ ] Score display (7-segment display)
+- [ ] Sound effects (Buzzer module)
+- [ ] Level indicator
+- [ ] Pause/Resume feature
+- [ ] High score saving (EEPROM)
+- [ ] Ghost piece (showing where block will land)
+- [ ] Next piece preview
+- [ ] Multiplayer mode
+- [ ] Different game modes
+
+---
+
+## 📸 Screenshots
+
+> Update this section with your actual project photos
+
+```
+📷 Assembled project photos
+📷 Gameplay screenshots
+📷 Circuit connection details
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please:
+
+1. 🍴 Fork this repository
+2. 🔨 Create a new branch (`git checkout -b feature/NewFeature`)
+3. 💾 Commit your changes (`git commit -m 'Add new feature'`)
+4. 📤 Push to the branch (`git push origin feature/NewFeature`)
+5. 🔃 Open a Pull Request
+
+---
+
+## 📞 Contact
+
+For questions or feedback, feel free to reach out:
+
+- 💼 **GitHub**: [@basaranbaran](https://github.com/basaranbaran)
+- 🔗 **Repository**: [Tetris-Game-With-Arduino](https://github.com/basaranbaran/Tetris-Game-With-Arduino)
+
+---
+
+## 🎓 What I Learned
+
+Through this project, I learned:
+
+- ✅ MAX7219 LED Matrix control
+- ✅ SPI communication protocol
+- ✅ Analog sensor reading (Joystick)
+- ✅ Game loop and state management
+- ✅ Render optimization techniques
+- ✅ Debounce algorithm implementation
+- ✅ Hardware-software integration
+- ✅ Embedded systems programming
+
+---
+
+## 🙏 Acknowledgments
+
+Thanks to the resources that helped during development:
+
+- Arduino Community
+- LedControl Library (Eberhard Fahle)
+- Tetris Game Logic References
+- All contributors and testers
 
 ---
 
 <div align="center">
 
-**⭐ If you liked this project, don't forget to give it a star! ⭐**
-
 **⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın! ⭐**
+
+**⭐ If you liked this project, don't forget to give it a star! ⭐**
 
 Made with ❤️ and Arduino
 
-[⬆ Back to Top | Yukarı Çık](#-tetris-game-with-arduino)
+[⬆ Yukarı Çık | Back to Top](#-tetris-game-with-arduino)
 
 </div>
