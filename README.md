@@ -24,14 +24,14 @@ Bu proje, klasik Tetris oyununun Arduino tabanlı donanım üzerinde çalışan 
 
 Oyun kontrolü, buton yerine **Analog Joystick** ile sağlanarak daha akıcı bir deneyim hedeflenmiştir. Kod yapısında, ekran titremesini önlemek için **"Render on Change"** (Sadece değişimde çiz) tekniği kullanılmış ve oyun hızı, zorluk seviyesine göre dinamik olarak artırılmıştır.
 
-### 🎯 Proje Hedefleri
+### 🎯 Proje Hedefleri:
 
 - Fiziksel, donanım tabanlı bir Tetris oyunu oluşturmak
 - SPI haberleşmesi ve LED matris kontrolünü öğrenmek
 - Verimli render algoritmaları geliştirmek
 - Eğlenceli, interaktif bir embedded sistem projesi yapmak
 
-### ✨ Öne Çıkan Özellikler
+### ✨ Öne Çıkan Özellikler:
 
 - 🎯 **Dikey Oynanış**: 8x24 LED Kule ile gerçek Tetris deneyimi
 - 🕹️ **Analog Joystick Kontrolü**: Butonlardan daha hassas ve akıcı hareket
@@ -44,7 +44,7 @@ Oyun kontrolü, buton yerine **Analog Joystick** ile sağlanarak daha akıcı bi
 
 ---
 
-## 🎥 Demo Video
+## 🎥 Demo Video:
 
 <div align="center">
 
