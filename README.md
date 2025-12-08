@@ -384,14 +384,14 @@ This project is a **vertical version** of the classic Tetris game running on Ard
 
 Game control is provided via an **Analog Joystick** instead of buttons for a smoother experience. The code structure uses a **"Render on Change"** technique to prevent screen flickering, and the game speed increases dynamically based on difficulty level.
 
-### 🎯 Project Goals
+### 🎯 Project Goals:
 
 - Create a physical, hardware-based Tetris game
 - Learn SPI communication and LED matrix control
 - Implement efficient rendering algorithms
 - Build a fun, interactive embedded system project
 
-### ✨ Key Features
+### ✨ Key Features:
 
 - 🎯 **Vertical Gameplay**: Real Tetris experience on 8x24 LED Tower
 - 🕹️ **Analog Joystick Control**: More precise and smooth movement than buttons
